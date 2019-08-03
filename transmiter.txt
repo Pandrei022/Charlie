@@ -61,7 +61,7 @@ void loop()
   if ((ay < 9000) and (ay > -9000) and (ax < 12000) and (ax > -3000))
   {
     text[i] = '0';
-    vw_send((byte *)text, sizeof(text));// g?i tín hi?u di
+    vw_send((byte *)text, sizeof(text));
     vw_wait_tx();
 
   }
@@ -70,19 +70,19 @@ void loop()
   {
     if (ay < -13000)
     {
-      text[i] = '5'; // t?i ph?i
+      text[i] = '5';
       vw_send((byte *)text, sizeof(text));
       vw_wait_tx();
     }
     else if (ay > 8000)
     {
-      text[i] = '6'; // t?i trái
+      text[i] = '6'; 
       vw_send((byte *)text, sizeof(text));
       vw_wait_tx();
     }
     else
     {
-      text[i] = '1'; //t?i
+      text[i] = '1';
       vw_send((byte *)text, sizeof(text));
       vw_wait_tx();
     }
@@ -92,13 +92,13 @@ void loop()
   {
     if (ax < -3800)
     {
-      text[i] = '5'; // t?i ph?i
+      text[i] = '5'; 
       vw_send((byte *)text, sizeof(text));
       vw_wait_tx();
     }
     else
     {
-      text[i] = '2'; // ph?i
+      text[i] = '2'; 
       vw_send((byte *)text, sizeof(text));
       vw_wait_tx();
     }
@@ -108,22 +108,22 @@ void loop()
   {
     if (ax < -3800)
     {
-      text[i] = '6'; // t?i trái
-      vw_send((byte *)text, sizeof(text));// g?i tín hi?u di
+      text[i] = '6'; 
+      vw_send((byte *)text, sizeof(text));
       vw_wait_tx();
     }
     else
     {
-      text[i] = '3'; //  trái
-      vw_send((byte *)text, sizeof(text));// g?i tín hi?u di
+      text[i] = '3';
+      vw_send((byte *)text, sizeof(text));
       vw_wait_tx();
     }
   }
 
   if (ax > 14000)
   {
-    text[i] = '4'; //lùi
-    vw_send((byte *)text, sizeof(text));// g?i tín hi?u di
+    text[i] = '4'; //lÃ¹i
+    vw_send((byte *)text, sizeof(text));
     vw_wait_tx();
   }
 

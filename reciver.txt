@@ -1,6 +1,6 @@
-#include <VirtualWire.h> // khai báo thu vi?n VirtualWire
+#include <VirtualWire.h>
 #include <AFMotor.h>
-byte msg[VW_MAX_MESSAGE_LEN];// bi?n luu d? li?u nh?n du?c
+byte msg[VW_MAX_MESSAGE_LEN];
 byte msgLen = VW_MAX_MESSAGE_LEN;
 char forward[1] = {1};
 
@@ -13,15 +13,15 @@ void setup()
 {
   Serial.begin(9600);
   Serial.println("READY..........");
-  vw_setup(2048); // cài d?t t?c d? truy?n tín hi?u
-  vw_set_rx_pin(2);// cài d?t chân digital d? nh?n tín hi?u
-  vw_rx_start();// b?t d?u nh?n tín hi?u
+  vw_setup(2048); 
+  vw_set_rx_pin(2);
+  vw_rx_start();
 }
 
 
 void loop()
 {
-  if (vw_get_message(msg, &msgLen)) // n?u có tín hi?u du?c truy?n d?n
+  if (vw_get_message(msg, &msgLen)) 
   {
     //Serial.print("got transmition");
     motor1.setSpeed(255);
